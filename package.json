@@ -1,5 +1,5 @@
 {
-  "name": "worker-rpc",
+  "name": "worker-run",
   "version": "1.0.0",
   "description": "run worker like rpc",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://fsx950223@github.com/fsx950223/worker-rpc.git"
+    "url": "git+https://fsx950223@github.com/fsx950223/worker-run.git"
   },
   "keywords": [
     "worker",
@@ -19,7 +19,7 @@
   "author": "fsx950223@outlook.com",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/fsx950223/worker-rpc/issues"
+    "url": "https://github.com/fsx950223/worker-run/issues"
   },
-  "homepage": "https://github.com/fsx950223/worker-rpc#readme"
+  "homepage": "https://github.com/fsx950223/worker-run#readme"
 }
