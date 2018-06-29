@@ -1,5 +1,5 @@
 export const run=(exec,...args)=>{
-    const file=new File([`try{const result=(${exec.toString()})(${args});this.postMessage(result)}catch(err){this.postMessage(err)}`],`worker.js`,{
+    const file=new File([`try{const result=(${exec.toString()})(${args});this.postMessage(result)}catch(err){this.postMessage(err)}`],`${Date.now()}${parseInt(Math.random()*10000)}.js`,{
       type: "application/javascript",
     })
     const url=URL.createObjectURL(file)
@@ -15,6 +15,5 @@ export const run=(exec,...args)=>{
                 resolve(event.data)
              }
         })
-    })
-   
+    })  
 }
