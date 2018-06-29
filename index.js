@@ -1,9 +1,10 @@
 export const run=(exec,...args)=>{
-    var file=new File([`try{var result=eval("(${exec.toString()})(${args})");this.postMessage(result)}catch(err){this.postMessage(err)}`],`${Date.now()+parseInt(Math.random()*10000)}.js`,{
+    const file=new File([`try{const result=(${exec.toString()})(${args});this.postMessage(result)}catch(err){this.postMessage(err)}`],`worker.js`,{
       type: "application/javascript",
     })
-    var url=URL.createObjectURL(file)
-    var worker=new Worker(url)
+    const url=URL.createObjectURL(file)
+    const worker=new Worker(url)
+    URL.revokeObjectURL(url)
     return new Promise((resolve,reject)=>{
         worker.addEventListener('message',(event)=>{
              worker.terminate()
