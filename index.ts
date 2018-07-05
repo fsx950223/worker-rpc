@@ -1,10 +1,10 @@
 export interface Params{
-    exec:Function;
+    exec:Function|string;
     callback?:Function;
     keepAlive?:boolean;
 }
 
-export const run = (exec:Function|Params, ...args:Array<any>) => {
+export const run = (exec:Function|Params|string, ...args:Array<any>) => {
     let callback
     let keepAlive
     if (typeof exec === "object") {
