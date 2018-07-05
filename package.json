@@ -14,7 +14,7 @@
     "worker",
     "browser",
     "javascript",
-    "rpc"
+    "webpack"
   ],
   "author": "fsx950223@outlook.com",
   "license": "ISC",
